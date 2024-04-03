@@ -65,6 +65,14 @@ class Scoreboard {
     public void resetScore() {
         this.score = 0;
     }
+
+    public int getScore() {
+        return this.score;
+    }
+
+    public int getHighScore() {
+        return this.highScore;
+    }
 }
 
 public class MathGame {
@@ -82,8 +90,18 @@ public class MathGame {
                 scoreboard.incrementScore();
             } else {
                 System.out.println("Vale vastus. Õige vastus oli " + question.getCorrectAnswer() + ".");
+                System.out.println("Sinu skoor on " + scoreboard.getScore() + " ja sinu kõrgeim skoor on " + scoreboard.getHighScore() + ".");
                 scoreboard.resetScore();
+
+                System.out.println("Kas soovid jätkata? (jah/ei)");
+                String continueGame = scanner.next();
+                if(continueGame.equalsIgnoreCase("ei")) {
+                    System.out.println("Mäng lõpetatud. Aitäh mängimast!");
+                    break;
+                }
             }
         }
+
+        scanner.close();
     }
 }
