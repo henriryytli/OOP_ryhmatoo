@@ -11,6 +11,9 @@ public class Skoor {
             this.kõrgeimSkoor = this.skoor;
             System.out.println("Hea töö! Uus kõrgeim skoor: "+ kõrgeimSkoor);
         }
+        else {
+            System.out.println("Sinu skoor on " + this.skoor);
+        }
     }
     public void resetSkoor(){
         this.skoor = 0;

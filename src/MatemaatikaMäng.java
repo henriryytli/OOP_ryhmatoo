@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MatemaatikaMäng extends Mäng {
+public class MatemaatikaMäng {
     public void mängi() {
         Skoor skoor = new Skoor();
         Scanner sc = new Scanner(System.in);
@@ -12,7 +12,6 @@ public class MatemaatikaMäng extends Mäng {
             if(küsimus.kontrolliVastust(sisestatudVastus)) {
                 System.out.println("Õige vastus!");
                 skoor.muudaSkoori();
-                System.out.println("Sinu skoor on " + skoor.getSkoor());
             } else {
                 System.out.println("Vale vastus. Õige vastus oli " + küsimus.getÕigeVastus() + ".");
                 System.out.println("Sinu skoor on " + skoor.getSkoor() + " ja sinu kõrgeim skoor on " + skoor.getKõrgeimSkoor() + ".");
