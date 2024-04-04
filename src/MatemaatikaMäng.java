@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -5,26 +7,22 @@ import java.util.Scanner;
 
 // MatemaatikaMäng klass haldab mängu
 public class MatemaatikaMäng {
-    private List<TriviaKüsimus> algsedTriviaKüsimused; // Kõik trivia küsimused
+    private List<TriviaKüsimus> TriviaKüsimusedNimekiri; // Kõik trivia küsimused
     private List<TriviaKüsimus> triviaKüsimused; // Praegused ülejäänud trivia küsimused
 
     // MatemaatikaMäng konstruktor
-    public MatemaatikaMäng() {
+    public MatemaatikaMäng() throws FileNotFoundException {
         // Lisame trivia küsimused
-        algsedTriviaKüsimused = new ArrayList<>();
-        algsedTriviaKüsimused.add(new TriviaKüsimus("Mis on Eesti pealinn?", "Tallinn"));
-        algsedTriviaKüsimused.add(new TriviaKüsimus("Mis planeet on päikesesüsteemi suurim?", "Jupiter"));
-        algsedTriviaKüsimused.add(new TriviaKüsimus("Mitu värvi on vikerkaarel?", "7"));
-        algsedTriviaKüsimused.add(new TriviaKüsimus("Kas heli levib kiiremini õhus või vees?", "Vees"));
-        algsedTriviaKüsimused.add(new TriviaKüsimus("Kas välk on kuumem kui päike?", "jah"));
-        algsedTriviaKüsimused.add(new TriviaKüsimus("Mitu elementi on perioodilisustabelis?", "118"));
-        algsedTriviaKüsimused.add(new TriviaKüsimus("Kust saavad taimed energiat?", "Päikeselt"));
-        algsedTriviaKüsimused.add(new TriviaKüsimus("Mis planeet kaotas oma planeedistaatuse?", "Pluuto"));
-        algsedTriviaKüsimused.add(new TriviaKüsimus("Millise bändi tunnuslugu on Dancing Queen?", "ABBA"));
-        algsedTriviaKüsimused.add(new TriviaKüsimus("Kus asub maailma aktiivseim vulkaan?", "Hawaii"));
-        algsedTriviaKüsimused.add(new TriviaKüsimus("Mis värv peegeldab valgust?", "Valge" ));
-        algsedTriviaKüsimused.add(new TriviaKüsimus("Mis värv neelab valgust", "Must"));
-        triviaKüsimused = new ArrayList<>(algsedTriviaKüsimused); // Koopia algsest listist
+        TriviaKüsimusedNimekiri = new ArrayList<>();
+        Scanner lugeja = new Scanner(new File("trivia.txt"), "UTF-8");
+        while (lugeja.hasNextLine()){
+            String rida = lugeja.nextLine();
+            String[] osa = rida.split(";");
+            String küsimus = osa[0];
+            String vastus = osa[1];
+            TriviaKüsimusedNimekiri.add(new TriviaKüsimus(küsimus, vastus));
+        }
+        triviaKüsimused = new ArrayList<>(TriviaKüsimusedNimekiri); // Koopia algsest listist
     }
 
     // Mängi meetod käivitab mängu
@@ -60,7 +58,7 @@ public class MatemaatikaMäng {
                     break;
                 }
                 else {
-                    triviaKüsimused = new ArrayList<>(algsedTriviaKüsimused);
+                    triviaKüsimused = new ArrayList<>(TriviaKüsimusedNimekiri);
                 }
             }
         }
@@ -69,7 +67,7 @@ public class MatemaatikaMäng {
     }
 
     // Main meetod käivitab mängu
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         MatemaatikaMäng mäng = new MatemaatikaMäng();
         mäng.mängi();
     }
