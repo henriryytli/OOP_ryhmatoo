@@ -26,7 +26,7 @@ public class MatemaatikaKüsimus extends Küsimus {
                 break;
             case 3:
                 tehteMärk = "/";
-                arv1 = arv1*arv2; // et jaguks täpselt 2-ga
+                arv1 = arv1*arv2; // et jaguks täpselt arv2-ga
                 vastus = String.valueOf(arv1 / arv2);
                 break;
         }
