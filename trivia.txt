@@ -1,0 +1,30 @@
+Mis on Eesti pealinn?;Tallinn
+Mis planeet on päikesesüsteemi suurim?;Jupiter
+Mitu värvi on vikerkaarel?;7
+Kas heli levib kiiremini õhus või vees?;Vees
+Kas välk on kuumem kui päike?;jah
+Mitu elementi on perioodilisustabelis?;118
+Kust saavad taimed energiat?;Päikeselt
+Mis planeet kaotas oma planeedistaatuse?;Pluuto
+Millise bändi tunnuslugu on Dancing Queen?;ABBA
+Kus asub maailma aktiivseim vulkaan?;Hawaii
+Mis värv peegeldab valgust?;Valge
+Mis värv neelab valgust?;Must
+Mis on maailma suurim elusorganism?;Sinivaal
+Kui palju hambaid on täiskasvanud inimesel?;32
+Milline päikesesüsteemi planeet on kõige kuumem?;Veenus
+Mis silmavärv on inimeste seas kõige levinum?;Pruun
+Mis on ainus metall, mis on toatemperatuuril vedel?;Elavhõbe
+Mis on inimkeha suurim organ?;Nahk
+Mis oli kõige esimese satelliidi nimi?;Sputnik
+Mis on Šotimaa rahvusloom?(Vihje: see on mütoloogiline olend);Ükssarvik
+Kes on Kreeka mütoloogias jumalate kuningaks?;Zeus
+Mis on meile lähim teine galaktika?;Andromeeda
+Mitme minutiga jõuab valgus päikeselt maale?;8
+Mis on kulla tähis keemilise elemendina?;Au
+Mis on ainuke planeet päikesesüsteemis, mis keerleb külje peal?;Uraan
+Kuidas nimetatakse ämblikute foobiat?;Arahnofoobia
+Mis aastal algas II Maailmasõda?;1939
+Mis aastal kirjutati alla USA iseseisvusdeklaratsioonile?;1776
+Mis aastal asutati Tartu Ülikool?;1632
+Mis programmeerimiskeeles on kirjutatud videomäng Minecraft?;Java
