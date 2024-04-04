@@ -38,6 +38,7 @@ public class MatemaatikaMäng {
             if (new Random().nextInt(2) == 0 || triviaKüsimused.isEmpty()) {
                 küsimus = new MatemaatikaKüsimus();
             } else {
+                // Eemaldab triviaküsimuste listist, et uuesti küsimuseks ei tuleks
                 int indeks = new Random().nextInt(triviaKüsimused.size());
                 küsimus = triviaKüsimused.get(indeks);
                 triviaKüsimused.remove(indeks);
